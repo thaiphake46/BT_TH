@@ -1,6 +1,5 @@
 public class Point {
-    private double x;
-    private double y;
+    protected double x, y;
 
     Point() {
         x = 0;
