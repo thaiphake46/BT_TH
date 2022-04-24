@@ -49,11 +49,24 @@ public class Main {
         System.out.println("Stack is empty: " + myStack.isEmpty());
     }
 
+    public static void validParentheses() {
+        /*
+        *   ([{}])
+        *   {}{}[)
+        *   ({]}[)
+        * */
+        String s = "({]}[)";
+        ValidParentheses valid = new ValidParentheses();
+        System.out.println("Is Valid: " + valid.isValid(s));
+    }
+
     public static void main(String[] args) {
 //        arrStack(); // cai dat stack bang array
 //        linkedListStack(); // cai dat stack bang linked list
 
 //         cai dat stack bang thu vien
 //         javaStack();
+//        bt isValid
+//        validParentheses();
     }
 }
