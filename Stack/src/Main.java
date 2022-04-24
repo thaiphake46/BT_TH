@@ -1,4 +1,5 @@
 import java.util.Scanner;
+import java.util.Stack;
 
 public class Main {
     public static Scanner sc = new Scanner(System.in);
@@ -35,8 +36,24 @@ public class Main {
         }
     }
 
+    public static void javaStack() {
+        Stack<Integer> myStack = new Stack<>();
+        System.out.println("Push: " + myStack.push(1));
+        System.out.println("Push: " + myStack.push(3));
+        System.out.println("Push: " + myStack.push(5));
+        System.out.println("Stack is empty: " + myStack.isEmpty());
+        System.out.println();
+        System.out.println("Pop: " + myStack.pop());
+        System.out.println("Pop: " + myStack.pop());
+        System.out.println("Pop: " + myStack.pop());
+        System.out.println("Stack is empty: " + myStack.isEmpty());
+    }
+
     public static void main(String[] args) {
 //        arrStack(); // cai dat stack bang array
 //        linkedListStack(); // cai dat stack bang linked list
+
+//         cai dat stack bang thu vien
+//         javaStack();
     }
 }
