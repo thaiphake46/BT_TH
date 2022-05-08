@@ -1,6 +1,7 @@
 import java.io.*;
 import java.nio.Buffer;
 import java.util.Scanner;
+import java.util.Arrays;
 
 public class DocGhiFile {
     public static Scanner sc = new Scanner(System.in);
@@ -25,14 +26,12 @@ public class DocGhiFile {
 
     public static void ghiFile() throws IOException{
         int[] arr = {1,2,3,4,5};
+        String strArr = Arrays.toString(arr);
         String tenFile = sc.nextLine();
         try {
             FileWriter fw = new FileWriter("file\\"+tenFile+".txt");
             BufferedWriter bw = new BufferedWriter(fw);
-            for(int i : arr) {
-                bw.write(i);
-
-            }
+            bw.write(strArr);
             bw.close();
             fw.close();
         } catch(IOException e) {
@@ -41,6 +40,6 @@ public class DocGhiFile {
     }
 
     public static void docFile() throws IOException {
-
+        
     }
 }
