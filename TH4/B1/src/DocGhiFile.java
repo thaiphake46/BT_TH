@@ -27,9 +27,9 @@ public class DocGhiFile {
     public static void ghiFile() throws IOException{
         int[] arr = {1,2,3,4,5};
         String strArr = Arrays.toString(arr);
-        String tenFile = sc.nextLine();
+//        String tenFile = sc.nextLine();
         try {
-            FileWriter fw = new FileWriter("file\\"+tenFile+".txt");
+            FileWriter fw = new FileWriter("file\\out.txt");
             BufferedWriter bw = new BufferedWriter(fw);
             bw.write(strArr);
             bw.close();
@@ -40,6 +40,23 @@ public class DocGhiFile {
     }
 
     public static void docFile() throws IOException {
-        
+//        String tenFile = sc.nextLine();
+        try {
+            FileReader fr = new FileReader("file\\out.txt");
+            BufferedReader br = new BufferedReader(fr);
+            String line = br.readLine();
+//            System.out.println(line);
+            String[] splitt = line.split(", ");
+            for(String s : splitt) {
+                System.out.println(s);
+            }
+//            while (true) {
+//                a;
+//            }
+            br.close();
+            fr.close();
+        } catch(IOException e) {
+            System.out.println(e);
+        }
     }
 }
